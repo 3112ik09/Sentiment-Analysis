@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Sentiment Analysis</title>
+    </head>
+    <body>
+        <h1>Welcome To Sentiment Analyzer</h1>
+        <form method="POST">
+            <textarea name="text1" placeholder="Say Something: ...." rows="10" cols="109"></textarea><br><br>
+
+            <input class="example_a" type="submit">
+        </form>
+        {% if final %}
+        <div>
+            <h2>The Sentiment of</h2> <h3>'{{ text1 }}'</h3> <h2>is {{ result }}</h2>
+        </div>
+        <div>
+            <h3>Percetage Positive = {{final *100}}%</h3>
+        </div>  
+        {% else %}
+            <p></p>
+        {% endif %}
+    </body>
+</html>
